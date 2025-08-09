@@ -1,5 +1,6 @@
 import React from 'react'
-import { Grid, Card, CardContent, Typography, Box } from '@mui/material'
+import {  Card, CardContent, Typography, Box } from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2' // ✅ new import for MUI v7
 import {
   TextFields,
   Numbers,

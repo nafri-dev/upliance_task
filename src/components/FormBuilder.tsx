@@ -14,16 +14,16 @@ import {
   DialogContent,
   DialogActions,
   TextField,
-  
 } from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2' // ✅ new import for MUI v7
 
-import Grid from '@mui/material/Grid';
+import {
+  Add as AddIcon,
+  Save as SaveIcon,
+  Preview as PreviewIcon,
+  Clear as ClearIcon
+} from '@mui/icons-material'
 
-
-
-
-
-import { Add as AddIcon, Save as SaveIcon, Preview as PreviewIcon, Clear as ClearIcon } from '@mui/icons-material'
 import FieldTypeSelector from './FieldTypeSelector'
 import FieldList from './FieldList'
 
@@ -45,9 +45,15 @@ const FormBuilder: React.FC = () => {
       type: fieldType as any,
       label: `New ${fieldType} field`,
       required: false,
-      defaultValue: fieldType === 'checkbox' ? false : fieldType === 'select' || fieldType === 'radio' ? '' : '',
+      defaultValue: fieldType === 'checkbox'
+        ? false
+        : fieldType === 'select' || fieldType === 'radio'
+        ? ''
+        : '',
       validationRules: [],
-      options: fieldType === 'select' || fieldType === 'radio' ? [{ label: 'Option 1', value: 'option1' }] : undefined,
+      options: fieldType === 'select' || fieldType === 'radio'
+        ? [{ label: 'Option 1', value: 'option1' }]
+        : undefined,
       derived: {
         isDerived: false,
         parentFields: [],
