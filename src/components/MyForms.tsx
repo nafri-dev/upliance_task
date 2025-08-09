@@ -14,7 +14,7 @@ import {
 
   Chip,
 } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2' // ✅ new import for MUI v7
+import Grid from '@mui/material/Unstable_Grid2' 
 import { Preview, Edit, DateRange } from '@mui/icons-material'
 
 const MyForms: React.FC = () => {
@@ -82,7 +82,7 @@ const MyForms: React.FC = () => {
 
       <Grid container spacing={3}>
         {savedForms.map((form) => (
-          <Grid item xs={12} md={6} lg={4} key={form.id}>
+          <Grid xs={12} md={6} lg={4} key={form.id}>
             <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
               <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant="h6" gutterBottom>

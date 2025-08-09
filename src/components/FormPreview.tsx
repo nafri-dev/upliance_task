@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
@@ -28,7 +28,7 @@ import { ArrowBack } from '@mui/icons-material'
 const FormPreview: React.FC = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const { currentForm, previewData } = useSelector((state: RootState) => state.formBuilder)
+  const { currentForm} = useSelector((state: RootState) => state.formBuilder)
   const [formData, setFormData] = useState<Record<string, any>>({})
   const [errors, setErrors] = useState<Record<string, string>>({})
 

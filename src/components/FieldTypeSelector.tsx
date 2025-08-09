@@ -31,7 +31,7 @@ const FieldTypeSelector: React.FC<FieldTypeSelectorProps> = ({ onSelect }) => {
       {fieldTypes.map((fieldType) => {
         const IconComponent = fieldType.icon
         return (
-          <Grid item xs={12} sm={6} key={fieldType.type}>
+          <Grid xs={12} sm={6} key={fieldType.type}>
             <Card
               sx={{
                 cursor: 'pointer',
